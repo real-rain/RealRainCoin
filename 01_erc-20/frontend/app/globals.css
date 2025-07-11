@@ -1,0 +1,58 @@
+/*
+ * @Description: 全局样式
+ * @Author: 真雨☔ 1936648485@qq.com
+ * @Date: 2025-07-11 01:04:41
+ * @LastEditors: 真雨☔ 1936648485@qq.com
+ * @LastEditTime: 2025-07-11 20:26:40
+ * @FilePath: \frontend\app\globals.css
+ * @X/Facebook: 1936648485@qq.com ~~~~~~~~~~~~~~~~~~~~~~~ Blog：reallyrain.com
+ * Copyright (c) 2025 by real-rain, All Rights Reserved. 
+ */
+@import "tailwindcss";
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+@font-face {
+  font-family: 'wq';
+  src: url('/assets/font/wq.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: wq;
+}
+
+/* 隐藏数字输入框的增减按钮 */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  /* Firefox */
+}
