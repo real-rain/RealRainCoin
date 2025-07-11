@@ -1,5 +1,5 @@
-// 从 ethers.js 库中导入 ethers 和 BigNumber，用于与区块链交互和大数计算
-import { ethers, BigNumber } from "ethers";
+// 从 ethers.js 库中导入 ethers，用于与区块链交互
+import { ethers } from "ethers";
 // 从 React 导入 useState 和 useEffect，用于管理组件的状态和副作用
 import { useState, useEffect } from "react";
 // 导入 RealRainCoin 智能合约的 ABI 文件，用于与合约进行交互
@@ -8,11 +8,11 @@ import RealRainCoin from "../RealRainCoin.json";
 // 导出默认组件 MintERC20，用于实现 ERC20 代币的铸造功能
 export default function MintERC20({ accounts }) {
   // 定义智能合约的部署地址
-  const ContractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
+  const ContractAddress = "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0";
 
   // 使用 useState 钩子定义 balance（用户余额）和 mintAmount（用户希望铸造的代币数量）的状态
   const [balance, setBalance] = useState(null); // 初始余额为空
-  const [mintAmount, setMintAmount] = useState(1); // 默认铸造数量为 1
+  const [mintAmount, setMintAmount] = useState('1'); // 默认铸造数量为 1
   // 判断是否连接了钱包，连接状态取决于 accounts 的第一个元素是否存在
   const isConnected = Boolean(accounts[0]);
 
@@ -31,13 +31,11 @@ export default function MintERC20({ accounts }) {
 
       try {
         // 将用户输入的铸造数量转换为以太坊单位（最小单位 Wei）
-        const mintAmountInETH = ethers.utils.parseUnits(
-          mintAmount.toString(),
-          18
-        );
+        const mintAmountInETH = ethers.parseEther(mintAmount); // BigInt: 12 ETH => 12000000000000000000n
+        console.log("type:", typeof mintAmountInETH, `======>${mintAmountInETH}`); // "bigint"
         // 调用智能合约的 mint 方法，并传入铸造数量
-        const response = await contract.mint(BigNumber.from(mintAmountInETH));
-        console.log("Minting response", response);
+        const response = await contract.mint(mintAmountInETH);
+        console.log("Minting response: ", response);
 
         // 监听合约的 Mint 事件，铸造完成后刷新余额
         contract.on("Mint", async () => {
@@ -45,7 +43,7 @@ export default function MintERC20({ accounts }) {
         });
       } catch (e) {
         // 捕获并打印铸造失败的错误信息
-        console.log("error", e);
+        console.log(e);
       }
     }
   }
@@ -65,17 +63,19 @@ export default function MintERC20({ accounts }) {
 
       try {
         // 调用智能合约的 balanceOf 方法获取用户余额
-        const userBalance = await contract.balanceOf(accounts[0]);
+        // const userBalance = await contract.balanceOf(accounts[0]);
+        const userBalance = await contract.balanceOf(accounts[0]); // 获取用户的代币余额
         // 格式化余额，将其转换为可读的浮点数
-        const formattedBalance = parseFloat(
-          ethers.utils.formatUnits(userBalance, 18)
-        ).toFixed(2);
+        const formattedBalance = ethers.formatEther(userBalance); // 转换为 ETH
+        // const formattedBalance = parseFloat(
+        //   ethers.utils.formatUnits(userBalance, 18)
+        // ).toFixed(2);
 
         // 更新余额状态
         setBalance(formattedBalance);
       } catch (e) {
         // 捕获并打印获取余额失败的错误信息
-        console.log("error fetching balance", e);
+        console.log(e);
       }
     }
   }
@@ -107,9 +107,9 @@ export default function MintERC20({ accounts }) {
               <div className="flex justify-center mt-4">
                 <input
                   value={mintAmount}
-                  onChange={(e) => setMintAmount(Number(e.target.value))}
+                  onChange={(e) => setMintAmount((e.target.value))}
                   className="text-center w-80 h-10 mt-4 mb-4 text-pink-600 text-2xl border border-gray-300 rounded-md p-2"
-                  type="number"
+                  type="string"
                   placeholder="请输入你想要铸造的代币数量..."
                   min="0"
                 />
@@ -125,6 +125,8 @@ export default function MintERC20({ accounts }) {
                 </button>
                 {/* 显示当前用户的代币余额 */}
                 <p className="t text-[#ff2c73] text-xl animate-pulse mt-4">
+                  当前账户地址：{accounts[0]}
+                  <br />
                   当前的 RealRainCoin 代币余额：{" "}
                   {balance !== null ? `${balance} ETH` : "正在加载中..."}
                 </p>
