@@ -3,13 +3,13 @@
  * @Author: 真雨☔ 1936648485@qq.com
  * @Date: 2025-07-11 22:46:08
  * @LastEditors: 真雨☔ 1936648485@qq.com
- * @LastEditTime: 2025-07-12 17:50:49
+ * @LastEditTime: 2025-07-12 17:52:54
  * @FilePath: \foundry_project\README.md
  * @X/Facebook: 1936648485@qq.com ~~~~~~~~~~~~~~~~~~~~~~~ Blog：reallyrain.com
  * Copyright (c) 2025 by real-rain, All Rights Reserved. 
 -->
 <h1 align="center"> 智能合约开发DEMO <br></h1>
-<p align="center"><strong>展示如何使用 Foundry 框架进行 Solidity 智能合约的开发；如何使用cast指令与智能合约交互；如何使用ethers库让前端与智能合约交互 <br>作者：realrain</br></strong>
+<p align="center"><strong>展示如何使用 Foundry 框架进行 Solidity 智能合约的开发；如何使用cast指令与智能合约交互；以及如何使用ethers库让前端与智能合约交互 <br>作者：realrain</br></strong>
 </p>
 
 <br>
