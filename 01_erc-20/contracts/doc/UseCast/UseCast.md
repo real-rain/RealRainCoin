@@ -90,4 +90,3 @@ $ forge selectors find 0x118cdaa7
 ```shell
 $ cast send ${CONTRACT_ADDRESS} "mint(uint256)" 23000000000000000000 --private-key ${USER_PRIVATE_KEY}
 ```
-![alt text](image-8.png)
