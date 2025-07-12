@@ -1,3 +1,13 @@
+/*
+ * @Description: 标题栏组件
+ * @Author: 真雨☔ 1936648485@qq.com
+ * @Date: 2025-07-10 00:24:50
+ * @LastEditors: 真雨☔ 1936648485@qq.com
+ * @LastEditTime: 2025-07-12 14:12:01
+ * @FilePath: \foundry_project\01_erc-20\frontend\components\navbar.js
+ * @X/Facebook: 1936648485@qq.com ~~~~~~~~~~~~~~~~~~~~~~~ Blog：reallyrain.com
+ * Copyright (c) 2025 by real-rain, All Rights Reserved. 
+ */
 // 导入 Next.js 提供的 Link 组件，用于实现页面跳转
 import Link from "next/link";
 // 导入 Next.js 提供的 Image 组件，用于优化图像加载
@@ -31,7 +41,7 @@ export default function Navbar({ accounts, setAccounts }) {
       }
     } catch (e) {
       // 捕获连接失败的异常，并在控制台打印错误信息
-      console.error("Failed to connect to accounts:", e);
+      console.error(e);
     }
   }
 

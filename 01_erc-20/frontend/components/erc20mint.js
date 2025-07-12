@@ -1,3 +1,13 @@
+/*
+ * @Description: 交互组件
+ * @Author: 真雨☔ 1936648485@qq.com
+ * @Date: 2025-07-10 23:23:01
+ * @LastEditors: 真雨☔ 1936648485@qq.com
+ * @LastEditTime: 2025-07-12 14:12:52
+ * @FilePath: \foundry_project\01_erc-20\frontend\components\erc20mint.js
+ * @X/Facebook: 1936648485@qq.com ~~~~~~~~~~~~~~~~~~~~~~~ Blog：reallyrain.com
+ * Copyright (c) 2025 by real-rain, All Rights Reserved. 
+ */
 // 从 ethers.js 库中导入 ethers，用于与区块链交互
 import { ethers } from "ethers";
 // 从 React 导入 useState 和 useEffect，用于管理组件的状态和副作用
@@ -32,7 +42,7 @@ export default function MintERC20({ accounts }) {
       try {
         // 将用户输入的铸造数量转换为以太坊单位（最小单位 Wei）
         const mintAmountInETH = ethers.parseEther(mintAmount); // BigInt: 12 ETH => 12000000000000000000n
-        console.log("type:", typeof mintAmountInETH, `======>${mintAmountInETH}`); // "bigint"
+        console.log("type:", `${typeof mintAmountInETH} ======> ${mintAmountInETH}`); // "bigint"
         // 调用智能合约的 mint 方法，并传入铸造数量
         const response = await contract.mint(mintAmountInETH);
         console.log("Minting response: ", response);
