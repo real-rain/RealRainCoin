@@ -3,7 +3,7 @@
  * @Author: 真雨☔ 1936648485@qq.com
  * @Date: 2025-07-11 22:46:08
  * @LastEditors: 真雨☔ 1936648485@qq.com
- * @LastEditTime: 2025-07-12 17:52:54
+ * @LastEditTime: 2025-07-12 18:17:08
  * @FilePath: \foundry_project\README.md
  * @X/Facebook: 1936648485@qq.com ~~~~~~~~~~~~~~~~~~~~~~~ Blog：reallyrain.com
  * Copyright (c) 2025 by real-rain, All Rights Reserved. 
@@ -118,6 +118,7 @@ $ cast --help
 <p align="center">
 <strong>
 作者： realrain<br>
+特别感谢：<a href="https://github.com/Luboy23">lllu_23<a/><br>
 联系方式: 1936648485@qq.com<br>
 Blog：<a href="https://reallyrain.com">真雨の小破站<a/><br>
 </strong>
