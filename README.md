@@ -3,17 +3,19 @@
  * @Author: 真雨☔ 1936648485@qq.com
  * @Date: 2025-07-11 22:46:08
  * @LastEditors: 真雨☔ 1936648485@qq.com
- * @LastEditTime: 2025-07-12 15:04:06
+ * @LastEditTime: 2025-07-12 15:43:48
  * @FilePath: \foundry_project\README.md
  * @X/Facebook: 1936648485@qq.com ~~~~~~~~~~~~~~~~~~~~~~~ Blog：reallyrain.com
  * Copyright (c) 2025 by real-rain, All Rights Reserved. 
 -->
-<h1 align="center"> 2025 年 Foundry 开发教程 <br></h1>
+<h1 align="center"> 智能合约开发教程 <br></h1>
 <p align="center"><strong>学习如何使用 Foundry 进行更深一步的 Solidity 智能合约开发 <br>作者：realrain</br></strong>
 </p>
 
 <br>
-<h1><strong>Warning: 本教程中构建的所有代码未经过严格审核，仅用于学习交流的目的，禁止在实际的生产环境中使用！！！！！！</strong></h1>
+
+> [!WARNING]
+> 本教程中构建的所有代码未经过严格审核，仅用于学习交流的目的，禁止在实际的生产环境中使用！！！！！！
 <br>
 <br>
 
