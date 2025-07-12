@@ -3,13 +3,13 @@
  * @Author: 真雨☔ 1936648485@qq.com
  * @Date: 2025-07-11 22:46:08
  * @LastEditors: 真雨☔ 1936648485@qq.com
- * @LastEditTime: 2025-07-12 15:46:18
+ * @LastEditTime: 2025-07-12 16:28:24
  * @FilePath: \foundry_project\README.md
  * @X/Facebook: 1936648485@qq.com ~~~~~~~~~~~~~~~~~~~~~~~ Blog：reallyrain.com
  * Copyright (c) 2025 by real-rain, All Rights Reserved. 
 -->
-<h1 align="center"> 智能合约开发教程 <br></h1>
-<p align="center"><strong>学习如何使用 Foundry 进行更深一步的 Solidity 智能合约开发 <br>作者：realrain</br></strong>
+<h1 align="center"> 智能合约开发DEMO <br></h1>
+<p align="center"><strong>展示学习如何使用 Foundry 框架进行 Solidity 智能合约的开发、交互 <br>作者：realrain</br></strong>
 </p>
 
 <br>
@@ -29,15 +29,13 @@
 3. [OpenZeppelin官网](https://www.openzeppelin.com/): 内有 Solidity 中最全的标准库，官方文档中包含不同操作系统的安装方式，以及查看标准库中一些合约的源代码，同时主页有一个简易的合约定制工具，可以快速生成 ERC-20, ERC-721 等合约的模板
 
 ## 环境配置
-1. 安装并配置 `git` 所需的环境
-    - [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-        - 安装成功后运行 `git --version`查看版本，截止 2025 年 7 月，使用的版本为 `2.50.0.windows.2`。
+1. [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)：Git 是一个免费的开源 分布式版本控制系统，旨在快速高效地处理从小型到大型的所有项目。
+  - 安装成功后运行 `git --version`查看版本，截止 2025 年 7 月，使用的版本为 `2.50.0.windows.2`。
 
-2. 安装并配置 `node` 运行所需的环境
-    - [node.js](https://nodejs.org/zh-cn)
-        - 安装成功后运行 `node -v` 查看版本，截止 2025 年 7 月，使用的版本为 `22.17.0`。
-        - 运行 `npm -v`，查看 `npm` 包管理器的版本，截止 2025 年 7 月，使用的版本为 `10.9.2`。
-        - 推荐使用`nvm`管理`node`版本，运行 `nvm -v`查看版本，截止 2025 年 7 月，使用的版本为 `1.2.2`。
+2. [Node.js](https://nodejs.org/zh-cn)：Node.js® 是一个免费、开源、跨平台的 JavaScript 运行时环境，可让开发人员创建服务器、Web 应用程序、命令行工具和脚本。
+  - 安装成功后运行 `node -v` 查看版本，截止 2025 年 7 月，使用的版本为 `22.17.0`。
+  - 运行 `npm -v`，查看 `npm` 包管理器的版本，截止 2025 年 7 月，使用的版本为 `10.9.2`。
+  - 推荐使用`nvm`管理`node`版本，运行 `nvm -v`查看版本，截止 2025 年 7 月，使用的版本为 `1.2.2`。
 
 ## 合约项目的环境配置
 1. 安装 `Rustup`: Foundry 运行必须的环境时
@@ -53,13 +51,13 @@
         - 安装成功后运行 `forge --version`查看版本 ，如果安装成功则显示 `forge x.x.x`，截止 2025 年 7 月，使用的版本为 `forge Version: 1.2.3-stable Commit SHA: a813a2cee7dd4926e7c56fd8a785b54f32e0d10f`
 
 ## 前端项目的环境配置
-1. 安装[Next.js](https://nextjs.org/): 前端框架，当然你也可以选择 React，Vue，截止 2025 年 7 月，使用的版本为 `15.3.5`。
+1. 安装[Next.js](https://nextjs.org/): Next.js 是一个用于构建全栈 Web 应用程序的 React 框架。您可以使用 React 组件构建用户界面，并使用 Next.js 实现附加功能和优化。截止 2025 年 7 月，使用的版本为 `15.3.5`。
   - 在终端运行`npx create-next-app@latest` 初始化一个 Nextjs 项目，并根据自己的需求选择所需要的附加插件
   
-2. 安装[tailwindcss](https://tailwindcss.com/docs/installation)，CSS框架，一般初始化Next项目时会提供选择，截止 2025 年 7 月，使用的版本为 `^4`。
+2. 安装[tailwindcss](https://tailwindcss.com/docs/installation)，CSS框架，一般初始化Next项目时会提供选择。截止 2025 年 7 月，使用的版本为 `^4`。
   - 在终端运行`npm install -D tailwindcss npx tailwindcss init`,然后根据官网文档进行配置
 
-3. 安装[Ethers](https://docs.ethers.org/v6/): 用于前端与合约之间的交互，截止 2025 年 7 月，使用的版本为 `^6.15.0`。
+3. 安装[Ethers](https://docs.ethers.org/v6/): ethers.js 库旨在成为一个与以太坊区块链及其生态系统交互的完整而紧凑的库。截止 2025 年 7 月，使用的版本为 `^6.15.0`。
 
 ***更多详细的交互指令见contracts/doc目录文档***
 <br><br>
