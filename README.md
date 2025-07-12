@@ -3,7 +3,7 @@
  * @Author: 真雨☔ 1936648485@qq.com
  * @Date: 2025-07-11 22:46:08
  * @LastEditors: 真雨☔ 1936648485@qq.com
- * @LastEditTime: 2025-07-12 15:43:48
+ * @LastEditTime: 2025-07-12 15:46:18
  * @FilePath: \foundry_project\README.md
  * @X/Facebook: 1936648485@qq.com ~~~~~~~~~~~~~~~~~~~~~~~ Blog：reallyrain.com
  * Copyright (c) 2025 by real-rain, All Rights Reserved. 
@@ -15,7 +15,7 @@
 <br>
 
 > [!WARNING]
-> 本教程中构建的所有代码未经过严格审核，仅用于学习交流的目的，禁止在实际的生产环境中使用！！！！！！
+> 本教程中构建的所有代码未经过严格审核，仅用于学习交流目的，禁止在实际的生产环境中使用！！！
 <br>
 <br>
 
@@ -39,7 +39,7 @@
         - 运行 `npm -v`，查看 `npm` 包管理器的版本，截止 2025 年 7 月，使用的版本为 `10.9.2`。
         - 推荐使用`nvm`管理`node`版本，运行 `nvm -v`查看版本，截止 2025 年 7 月，使用的版本为 `1.2.2`。
 
-## 合约部分的环境配置
+## 合约项目的环境配置
 1. 安装 `Rustup`: Foundry 运行必须的环境时
    - [rust](https://www.rust-lang.org/tools/install)
         - 安装成功后运行 `rustc --version`查看版本 ，截止 2025 年 7 月，使用的版本为 `rustc 1.88.0 (6b00bc388 2025-06-23)`
